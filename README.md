@@ -67,10 +67,11 @@ Perform a 90-10 train-validation split.
 Train the model using the defined ResNet architecture.
 Apply early stopping based on the validation F1 score.
 Save the best model checkpoints.
+
+
 ---
 ## Project Structure
-plaintext
-Copy code
+```plaintext
 .
 ├── checkpoints/      # Folder to store model checkpoints
 ├── data.py           # Data loader and preprocessing logic
@@ -78,7 +79,7 @@ Copy code
 ├── train.py          # Main script to train the model
 ├── trainer.py        # Trainer class handling training and evaluation
 └── requirements.txt  # Required dependencies
-
+```
 ---
 ## Dataset
 The dataset consists of grayscale images that are converted to RGB before being fed into the model. The dataset is expected to have two labels:
