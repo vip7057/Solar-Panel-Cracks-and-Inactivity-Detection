@@ -102,8 +102,8 @@ self.fc1 = torch.nn.Linear(2048, 512)
 self.fc2 = torch.nn.Linear(512, 256)
 self.fc3 = torch.nn.Linear(256, 2)  # Output for two binary classification tasks
 ```
-**Activation and Output**
-The final layer uses a sigmoid activation to output probabilities for the two binary classification tasks.
+### **Activation and Output**
+- The final layer uses a sigmoid activation to output probabilities for the two binary classification tasks.
 ---
 ## Training
 The training process uses the following components:
