@@ -28,19 +28,16 @@ This project involves detecting cracks and inactive regions in images using a de
 
 To set up the environment for this project, install the required dependencies by running:
 
+### Uasing requirements.txt
 ```bash
 pip install -r requirements.txt
 ```
+### Using environment.yml
+Alternatively, you can create the environment using Conda with the following command:
 
-**Requirements**
-- Python 3.7+
-- PyTorch
-- torchvision
-- scikit-image
-- pandas
-- matplotlib
-- scikit-learn
-- tqdm
+```bash
+conda env create -f environment.yml
+```
 
 ---
 ## Usage
@@ -74,6 +71,9 @@ This will:
 ```plaintext
 .
 ├── checkpoints/      # Folder to store model checkpoints
+├── images/           # Folder containing training images
+├── data.csv          # Folder containing image paths and corresponding labels
+├── checkpoints      # Folder to store model checkpoints
 ├── data.py           # Data loader and preprocessing logic
 ├── model.py          # ResNet-50 based model architecture
 ├── train.py          # Main script to train the model
