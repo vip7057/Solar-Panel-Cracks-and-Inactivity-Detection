@@ -62,11 +62,11 @@ python train.py
 ```
 This will:
 
-Load the dataset from data.csv.
-Perform a 90-10 train-validation split.
-Train the model using the defined ResNet architecture.
-Apply early stopping based on the validation F1 score.
-Save the best model checkpoints.
+- Load the dataset from data.csv.
+- Perform a 90-10 train-validation split.
+- Train the model using the defined ResNet architecture.
+- Apply early stopping based on the validation F1 score.
+- Save the best model checkpoints.
 
 
 ---
@@ -96,35 +96,33 @@ The dataset consists of grayscale images that are converted to RGB before being 
 ## Model Architecture
 The model is based on the ResNet-50 architecture, pretrained on ImageNet. The final layers are modified for binary classification:
 
-python
-Copy code
+```python
 self.fc1 = torch.nn.Linear(2048, 512)
 self.fc2 = torch.nn.Linear(512, 256)
 self.fc3 = torch.nn.Linear(256, 2)  # Output for two binary classification tasks
-Activation and Output
+```
+**Activation and Output**
 The final layer uses a sigmoid activation to output probabilities for the two binary classification tasks.
 ---
 ## Training
 The training process uses the following components:
+- **Loss Function:** Binary Cross-Entropy with Logits Loss (BCEWithLogitsLoss) with class weights to handle dataset imbalance.
+- **Optimizer:** Adam optimizer (torch.optim.Adam) with a learning rate of 0.0001.
+- **Learning Rate Scheduler:** Reduces learning rate if the validation F1 score plateaus.
+- **Batch Size:** Default is 32.
+- **Early Stopping:** Training will stop if the validation F1 score does not improve for 10 consecutive epochs to prevent overfitting.
 
-Loss Function: Binary Cross-Entropy with Logits Loss (BCEWithLogitsLoss) with class weights to handle dataset imbalance.
-Optimizer: Adam optimizer (torch.optim.Adam) with a learning rate of 0.0001.
-Learning Rate Scheduler: Reduces learning rate if the validation F1 score plateaus.
-Batch Size: Default is 32.
-Early Stopping
-Training will stop if the validation F1 score does not improve for 10 consecutive epochs to prevent overfitting.
 ---
 ## Evaluation
 The validation process computes:
 
-Loss: Binary cross-entropy loss.
-F1 Score: The F1 score is used as the primary metric for evaluating model performance.
+**Loss:** Binary cross-entropy loss.
+**F1 Score:** The F1 score is used as the primary metric for evaluating model performance.
 The best model based on the validation F1 score is saved. The F1 score is computed as:
 
-python
-Copy code
+```python
 f1_score(true_labels, predictions, average='weighted')
-
+```
 ---
 ## Results
 After training, the model's performance (loss, F1 score) is visualized with a loss plot saved as losses.png. The best model is saved in the checkpoints/ directory.
@@ -132,15 +130,14 @@ After training, the model's performance (loss, F1 score) is visualized with a lo
 ## Exporting Model
 The best-performing model can be exported as an ONNX file for deployment:
 
-bash
-Copy code
+```bash
 python train.py
-At the end of training, the model is saved as an ONNX file:
+```
+At the end of the training, the model is saved as an ONNX file:
 
-bash
-Copy code
+```bash
 best_model_epoch{epoch_number}.onnx
-
+```
 ---
 ##References
 ResNet Architecture: Deep Residual Learning for Image Recognition
