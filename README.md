@@ -52,6 +52,7 @@ Ensure the images are in grayscale format. The code automatically handles the co
 
 
 **Training**
+
 To train the model, run:
 
 ```bash
@@ -127,7 +128,7 @@ f1_score(true_labels, predictions, average='weighted')
 ```
 ---
 ## Results
-After training, the model's performance (loss, F1 score) is visualized with a loss plot saved as losses.png. The best model is saved in the checkpoints/ directory.
+- After training, the model achieved the highest F1 score of approximately **94%** on the training set and **93.7%** on the testing set. The model's performance (loss, F1 score) is visualized with a loss plot saved as [losses.png]. The best model is saved in the [checkpoints/] directory.
 ---
 ## Exporting Model
 The best-performing model can be exported as an ONNX file for deployment:
@@ -141,6 +142,6 @@ At the end of the training, the model is saved as an ONNX file:
 best_model_epoch{epoch_number}.onnx
 ```
 ---
-##References
+## References
 ResNet Architecture: Deep Residual Learning for Image Recognition
 PyTorch ONNX Export: PyTorch Documentation
