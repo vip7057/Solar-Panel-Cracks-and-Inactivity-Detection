@@ -29,9 +29,10 @@ This project involves detecting cracks and inactive regions in images using a de
 To set up the environment for this project, install the required dependencies by running:
 
 ```bash
-pip install -r requirements.txt'''
+pip install -r requirements.txt
+```
 
-## Requirements
+**Requirements**
 - Python 3.7+
 - PyTorch
 - torchvision
@@ -42,7 +43,7 @@ pip install -r requirements.txt'''
 - tqdm
 
 ---
-Usage
+## Usage
 Data Preparation
 The dataset should be provided as a CSV file (data.csv) with the following columns:
 
@@ -50,6 +51,7 @@ Image Path: Path to the image files.
 Crack Label: Binary label (1 for crack, 0 for no crack).
 Inactive Label: Binary label (1 for inactive, 0 for active).
 Ensure the images are in grayscale format. The code automatically handles the conversion to RGB.
+
 
 Training
 To train the model, run:
@@ -64,7 +66,8 @@ Perform a 90-10 train-validation split.
 Train the model using the defined ResNet architecture.
 Apply early stopping based on the validation F1 score.
 Save the best model checkpoints.
-Project Structure
+---
+## Project Structure
 plaintext
 Copy code
 .
@@ -74,7 +77,9 @@ Copy code
 ├── train.py          # Main script to train the model
 ├── trainer.py        # Trainer class handling training and evaluation
 └── requirements.txt  # Required dependencies
-Dataset
+
+---
+## Dataset
 The dataset consists of grayscale images that are converted to RGB before being fed into the model. The dataset is expected to have two labels:
 
 Crack: Binary label indicating the presence of cracks.
@@ -83,7 +88,9 @@ Data Augmentation
 Horizontal and Vertical Flip: Applied with a probability of 0.4 to improve model robustness.
 Color Jittering: Random adjustments to brightness, contrast, saturation, and hue.
 Normalization: Images are normalized using the mean and standard deviation of the training set.
-Model Architecture
+
+---
+## Model Architecture
 The model is based on the ResNet-50 architecture, pretrained on ImageNet. The final layers are modified for binary classification:
 
 python
@@ -93,7 +100,8 @@ self.fc2 = torch.nn.Linear(512, 256)
 self.fc3 = torch.nn.Linear(256, 2)  # Output for two binary classification tasks
 Activation and Output
 The final layer uses a sigmoid activation to output probabilities for the two binary classification tasks.
-Training
+---
+## Training
 The training process uses the following components:
 
 Loss Function: Binary Cross-Entropy with Logits Loss (BCEWithLogitsLoss) with class weights to handle dataset imbalance.
@@ -102,8 +110,8 @@ Learning Rate Scheduler: Reduces learning rate if the validation F1 score platea
 Batch Size: Default is 32.
 Early Stopping
 Training will stop if the validation F1 score does not improve for 10 consecutive epochs to prevent overfitting.
-
-Evaluation
+---
+## Evaluation
 The validation process computes:
 
 Loss: Binary cross-entropy loss.
@@ -113,10 +121,12 @@ The best model based on the validation F1 score is saved. The F1 score is comput
 python
 Copy code
 f1_score(true_labels, predictions, average='weighted')
-Results
-After training, the model's performance (loss, F1 score) is visualized with a loss plot saved as losses.png. The best model is saved in the checkpoints/ directory.
 
-Exporting Model
+---
+## Results
+After training, the model's performance (loss, F1 score) is visualized with a loss plot saved as losses.png. The best model is saved in the checkpoints/ directory.
+---
+## Exporting Model
 The best-performing model can be exported as an ONNX file for deployment:
 
 bash
@@ -127,6 +137,8 @@ At the end of training, the model is saved as an ONNX file:
 bash
 Copy code
 best_model_epoch{epoch_number}.onnx
-References
+
+---
+##References
 ResNet Architecture: Deep Residual Learning for Image Recognition
 PyTorch ONNX Export: PyTorch Documentation
