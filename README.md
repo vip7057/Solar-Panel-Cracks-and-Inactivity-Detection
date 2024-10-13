@@ -73,8 +73,9 @@ This will:
 ├── checkpoints/      # Folder to store model checkpoints
 ├── images/           # Folder containing training images
 ├── data.csv          # Folder containing image paths and corresponding labels
-├── checkpoints      # Folder to store model checkpoints
 ├── data.py           # Data loader and preprocessing logic
+├── environment.yml   # Conda environment file
+├── export_onnx.py    # Save the model in ONNX format
 ├── model.py          # ResNet-50 based model architecture
 ├── train.py          # Main script to train the model
 ├── trainer.py        # Trainer class handling training and evaluation
