@@ -62,17 +62,17 @@ Here are some example images from the dataset:
   </div>
 
   <div style="margin: 10px;">
-    <img src="path/to/cell0040.png" alt="Example Image 2" width="200"/>
+    <img src="images/cell0040.png" alt="Example Image 2" width="200"/>
     <p>Image 2: Description of the image</p>
   </div>
 
   <div style="margin: 10px;">
-    <img src="path/to/cell0060.png" alt="Example Image 3" width="200"/>
+    <img src="images/cell0060.png" alt="Example Image 3" width="200"/>
     <p>Image 3: Description of the image</p>
   </div>
 
   <div style="margin: 10px;">
-    <img src="path/to/cell0076.png" alt="Example Image 4" width="200"/>
+    <img src="images/cell0076.png" alt="Example Image 4" width="200"/>
     <p>Image 4: Description of the image</p>
   </div>
 
