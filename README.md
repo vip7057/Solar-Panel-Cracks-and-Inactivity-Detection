@@ -117,8 +117,9 @@ The training process uses the following components:
 ## Evaluation
 The validation process computes:
 
-**Loss:** Binary cross-entropy loss.
-**F1 Score:** The F1 score is used as the primary metric for evaluating model performance.
+- **Loss:** Binary cross-entropy loss.
+- **F1 Score:** The F1 score is used as the primary metric for evaluating model performance.
+  
 The best model based on the validation F1 score is saved. The F1 score is computed as:
 
 ```python
