@@ -84,12 +84,13 @@ Save the best model checkpoints.
 ## Dataset
 The dataset consists of grayscale images that are converted to RGB before being fed into the model. The dataset is expected to have two labels:
 
-Crack: Binary label indicating the presence of cracks.
-Inactive: Binary label indicating inactive regions.
-Data Augmentation
-Horizontal and Vertical Flip: Applied with a probability of 0.4 to improve model robustness.
-Color Jittering: Random adjustments to brightness, contrast, saturation, and hue.
-Normalization: Images are normalized using the mean and standard deviation of the training set.
+- **Crack:** Binary label indicating the presence of cracks.
+- **Inactive:** Binary label indicating inactive regions.
+
+**Data Augmentation**
+- Horizontal and Vertical Flip: Applied with a probability of 0.4 to improve model robustness.
+- Color Jittering: Random adjustments to brightness, contrast, saturation, and hue.
+- Normalization: Images are normalized using the mean and standard deviation of the training set.
 
 ---
 ## Model Architecture
