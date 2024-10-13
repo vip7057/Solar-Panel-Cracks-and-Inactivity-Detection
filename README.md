@@ -182,4 +182,4 @@ best_model_epoch{epoch_number}.onnx
 If you have any questions or would like to contribute, please feel free to reach out to me at:
 
 - **Email**: vipulpatil7057@gmail.com
-- **Email**: sushantnemade15@gmailcom
+- **Email**: sushantnemade15@gmail.com
