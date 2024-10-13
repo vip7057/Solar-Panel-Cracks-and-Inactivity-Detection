@@ -30,3 +30,13 @@ To set up the environment for this project, install the required dependencies by
 
 ```bash
 pip install -r requirements.txt
+---
+## Requirements
+- Python 3.7+
+- PyTorch
+- torchvision
+- scikit-image
+- pandas
+- matplotlib
+- scikit-learn
+- tqdm
