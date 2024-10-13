@@ -44,21 +44,22 @@ pip install -r requirements.txt
 
 ---
 ## Usage
-Data Preparation
+**Data Preparation**
 The dataset should be provided as a CSV file (data.csv) with the following columns:
 
-Image Path: Path to the image files.
-Crack Label: Binary label (1 for crack, 0 for no crack).
-Inactive Label: Binary label (1 for inactive, 0 for active).
+- **Image Path:** Path to the image files.
+- **Crack Label:** Binary label (1 for crack, 0 for no crack).
+- **Inactive Label:** Binary label (1 for inactive, 0 for active).
+
 Ensure the images are in grayscale format. The code automatically handles the conversion to RGB.
 
 
-Training
+**Training**
 To train the model, run:
 
-bash
-Copy code
+```bash
 python train.py
+```
 This will:
 
 Load the dataset from data.csv.
