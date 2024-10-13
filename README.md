@@ -23,6 +23,7 @@ This project involves detecting cracks and inactive regions in images using a de
 - [Results](#results)
 - [Exporting Model](#exporting-model)
 - [References](#references)
+- [Contributors](#contributors)
 
 ## Installation
 
@@ -172,5 +173,13 @@ best_model_epoch{epoch_number}.onnx
 ```
 ---
 ## References
-ResNet Architecture: Deep Residual Learning for Image Recognition
-PyTorch ONNX Export: PyTorch Documentation
+
+- **ResNet Architecture**: He, K., Zhang, X., Ren, S., & Sun, J. (2016). Deep Residual Learning for Image Recognition. *Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR)*, 770-778. [Link to paper](https://arxiv.org/abs/1512.03385).
+- **PyTorch ONNX Export**: PyTorch Documentation. [Link to documentation](https://pytorch.org/docs/stable/jit.html#torch.jit.trace).
+---
+## Contributors
+
+If you have any questions or would like to contribute, please feel free to reach out to me at:
+
+- **Email**: vipulpatil7057@gmail.com
+- **Email**: sushantnemade15@gmailcom
