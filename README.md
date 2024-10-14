@@ -29,7 +29,7 @@ This project involves detecting cracks and inactive regions in images using a de
 
 To set up the environment for this project, install the required dependencies by running:
 
-### Uasing requirements.txt
+### Using requirements.txt
 ```bash
 pip install -r requirements.txt
 ```
