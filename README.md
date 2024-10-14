@@ -59,17 +59,17 @@ Here are some example images from the dataset:
 
   <div style="margin: 10px;">
     <img src="images/cell0038.png" alt="Example Image 1" width="200"/>
-    <p>Image 1: Solar Panel with Both Crack and Inactive Reagions</p>
+    <p>Image 1: Solar Panel with Both Crack and Inactive Regions</p>
   </div>
 
   <div style="margin: 10px;">
     <img src="images/cell0040.png" alt="Example Image 2" width="200"/>
-    <p>Image 2: Solar Panel with Both Crack and Inactive Reagions</p>
+    <p>Image 2: Solar Panel with Both Crack and Inactive Regions</p>
   </div>
 
   <div style="margin: 10px;">
     <img src="images/cell0060.png" alt="Example Image 3" width="200"/>
-    <p>Image 3:Solar Panel with neither Crack nor Inactive Reagions</p>
+    <p>Image 3:Solar Panel with neither Crack nor Inactive Regions</p>
   </div>
 
   <div style="margin: 10px;">
