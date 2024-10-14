@@ -74,7 +74,7 @@ Here are some example images from the dataset:
 
   <div style="margin: 10px;">
     <img src="images/cell0076.png" alt="Example Image 4" width="200"/>
-    <p>Image 4: Solar Panel with only Cracks but no Inactive Reagions</p>
+    <p>Image 4: Solar Panel with only Cracks but no Inactive Regions</p>
   </div>
 
 </div>
